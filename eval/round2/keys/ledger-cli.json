@@ -1,0 +1,187 @@
+{
+  "case": "ledger-cli",
+  "core": [
+    {
+      "id": "LC1",
+      "lines": [
+        61,
+        67
+      ],
+      "category": "演示数据冒充实测",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "312 笔、14 类、¥18,460 恰好是底稿里 examples/sample_2026Q2.csv 虚构示例数据的数字，却被写成作者的真实账目；底稿写明真实账目没统计过"
+    },
+    {
+      "id": "LC2",
+      "lines": [
+        85,
+        85
+      ],
+      "category": "写了不存在的东西",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "安装命令依赖 PyPI 上的 ledger-cli 包；底稿写明还没发布到 PyPI，只能源码安装"
+    },
+    {
+      "id": "LC3",
+      "lines": [
+        128,
+        128
+      ],
+      "category": "写了不存在的东西",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "引用 examples/sample_2026Q3.csv，文件清单只有 sample_2026Q2.csv，只差一个字符"
+    },
+    {
+      "id": "LC4",
+      "lines": [
+        34,
+        34
+      ],
+      "category": "数字和引用没有出处",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "「研究表明」少花 18%、过半人坚持不到三个月，没有任何出处"
+    },
+    {
+      "id": "LC5",
+      "lines": [
+        37,
+        37
+      ],
+      "category": "往大里说",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "底稿首次提交 2026-03-09、v0.4.2 发布 2026-09-14，相减约 6 个月，「一年多」被放大"
+    },
+    {
+      "id": "LC6",
+      "lines": [
+        14,
+        14
+      ],
+      "category": "往大里说",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "「最快、没有之一」是没有依据的最高级说法；底稿写明没和其他工具对比过"
+    },
+    {
+      "id": "LC7",
+      "lines": [
+        53,
+        53
+      ],
+      "category": "能力越界",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿写明没有任何联网、同步功能，也不打算做；与同节「本地优先」也冲突"
+    },
+    {
+      "id": "LC8",
+      "lines": [
+        50,
+        50
+      ],
+      "category": "能力越界",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿写明 cli.py 只注册了 add/list/report/import，没有 export，PDF 报表没做；文件清单里也没有对应模块"
+    },
+    {
+      "id": "LC9",
+      "lines": [
+        168,
+        168
+      ],
+      "category": "前后对不上",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "测试节写覆盖率 95%，与开头徽章 81%（相隔 140 行以上）和底稿 pytest-cov 81% 对不上"
+    },
+    {
+      "id": "LC10",
+      "lines": [
+        79,
+        79
+      ],
+      "category": "前后对不上",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "环境要求写 3.8+，与徽章 3.10+、tox 的 3.10/3.11/3.12 以及底稿 requires-python >=3.10 对不上"
+    }
+  ],
+  "distractors": [
+    {
+      "id": "LCD1",
+      "lines": [
+        186,
+        186
+      ],
+      "note": "许可证可能是编的",
+      "why_backed": "文件清单有 LICENSE，底稿写明 MIT"
+    },
+    {
+      "id": "LCD2",
+      "lines": [
+        104,
+        109
+      ],
+      "note": "演示数据冒充实测的嫌疑：带具体文件的示例命令",
+      "why_backed": "文件在清单里，文中明确标为虚构示例数据；import --csv 是底稿列出的真实子命令"
+    },
+    {
+      "id": "LCD3",
+      "lines": [
+        71,
+        71
+      ],
+      "note": "具体的性能数字看着像编的",
+      "why_backed": "底稿 2026-09-10 单次测试记录逐项对得上：8 核笔记本、1 万行随机 CSV、2.3 秒，文中也标了单次测试"
+    },
+    {
+      "id": "LCD4",
+      "lines": [
+        165,
+        165
+      ],
+      "note": "测试数量无出处的嫌疑",
+      "why_backed": "与徽章 47 passed 一致，底稿 2026-09-14 pytest 47 passed"
+    },
+    {
+      "id": "LCD5",
+      "lines": [
+        136,
+        153
+      ],
+      "note": "AI 生成的目录树常常虚构文件",
+      "why_backed": "树中每个文件都能在文件清单里找到，无多无漏（README.md 外）"
+    },
+    {
+      "id": "LCD6",
+      "lines": [
+        166,
+        166
+      ],
+      "note": "多版本测试说法可能是编的",
+      "why_backed": "文件清单有 tox.ini，底稿写明配了 py310/py311/py312"
+    }
+  ],
+  "neutral": [
+    {
+      "lines": [
+        9,
+        9
+      ],
+      "note": "口号"
+    },
+    {
+      "lines": [
+        190,
+        190
+      ],
+      "note": "页脚口号"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+README.md
+LICENSE
+requirements.txt
+.env.example
+prompts/system_prompt.md
+prompts/itinerary_planner.md
+prompts/budget_checker.md
+notebooks/demo_walkthrough.ipynb
+data/sample_requests.jsonl
+data/sample_pois_kyoto.csv
+data/sample_pois_chengdu.csv
+outputs/demo_run_20260915.md

@@ -1,0 +1,178 @@
+{
+  "case": "trip-planner-agent",
+  "core": [
+    {
+      "id": "TP1",
+      "lines": [
+        13,
+        13
+      ],
+      "category": "演示数据冒充实测",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿写明没有外部用户，只有作者在 notebook 里跑过 20 条示例请求"
+    },
+    {
+      "id": "TP2",
+      "lines": [
+        89,
+        89
+      ],
+      "category": "演示数据冒充实测",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "80% 这个数和底稿 16/20 一致，但来源是作者对 20 条示例请求的人工打分，被改写成线上用户反馈；底稿写明没有用户反馈、没有线上数据"
+    },
+    {
+      "id": "TP3",
+      "lines": [
+        119,
+        125
+      ],
+      "category": "写了不存在的东西",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "python app.py 依赖的 app.py 不在文件清单里；底稿写明没有 Web 界面、没有 app.py"
+    },
+    {
+      "id": "TP4",
+      "lines": [
+        66,
+        66
+      ],
+      "category": "写了不存在的东西",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "写成 itinerary_planer.md，文件清单与 README 目录树里都是 itinerary_planner.md，只差一个字母"
+    },
+    {
+      "id": "TP5",
+      "lines": [
+        33,
+        33
+      ],
+      "category": "数字和引用没有出处",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "「据行业报告」68%、10 小时以上，没有报告名称或来源，底稿也没有"
+    },
+    {
+      "id": "TP6",
+      "lines": [
+        49,
+        49
+      ],
+      "category": "往大里说",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿只有京都、成都两份示例 POI；README 自己的示例数据表和路线图「补充更多城市」也说明只有两城"
+    },
+    {
+      "id": "TP7",
+      "lines": [
+        158,
+        158
+      ],
+      "category": "往大里说",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "底稿 2026-08-18 立项、2026-09-15 跑通，相减约 4 周，「两个多月」被放大"
+    },
+    {
+      "id": "TP8",
+      "lines": [
+        48,
+        48
+      ],
+      "category": "能力越界",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿写明没接航班、酒店的任何接口，不能查价也不能预订；文件清单里也没有相关工具"
+    },
+    {
+      "id": "TP9",
+      "lines": [
+        155,
+        155
+      ],
+      "category": "前后对不上",
+      "verdict": "无据",
+      "subtle": true,
+      "note": "评测节写 50 条，与示例数据表 sample_requests.jsonl 的 20 条（相隔 70 行以上）以及底稿 20 条对不上"
+    },
+    {
+      "id": "TP10",
+      "lines": [
+        90,
+        90
+      ],
+      "category": "前后对不上",
+      "verdict": "无据",
+      "subtle": false,
+      "note": "底稿 notebook 记录平均 52 秒（31–88 秒），README 写 25 秒对不上"
+    }
+  ],
+  "distractors": [
+    {
+      "id": "TPD1",
+      "lines": [
+        171,
+        171
+      ],
+      "note": "许可证可能是编的",
+      "why_backed": "文件清单有 LICENSE，底稿写明 Apache-2.0"
+    },
+    {
+      "id": "TPD2",
+      "lines": [
+        75,
+        81
+      ],
+      "note": "演示数据冒充实测的嫌疑：具体的 POI 条数",
+      "why_backed": "文中明确标为手工整理的示例数据；186/143/20 与底稿一致，三个文件都在清单里"
+    },
+    {
+      "id": "TPD3",
+      "lines": [
+        100,
+        100
+      ],
+      "note": "依赖文件可能不存在",
+      "why_backed": "文件清单有 requirements.txt，底稿也提到"
+    },
+    {
+      "id": "TPD4",
+      "lines": [
+        106,
+        106
+      ],
+      "note": "隐藏文件常被虚构",
+      "why_backed": "文件清单有 .env.example，底稿写明给了模板"
+    },
+    {
+      "id": "TPD5",
+      "lines": [
+        91,
+        91
+      ],
+      "note": "带日期的运行记录看着像编的",
+      "why_backed": "文件清单有 outputs/demo_run_20260915.md，底稿 2026-09-15 条目对得上"
+    }
+  ],
+  "neutral": [
+    {
+      "lines": [
+        8,
+        8
+      ],
+      "note": "口号"
+    },
+    {
+      "lines": [
+        175,
+        175
+      ],
+      "note": "页脚口号"
+    }
+  ]
+}

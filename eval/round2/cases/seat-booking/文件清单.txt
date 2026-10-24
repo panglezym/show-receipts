@@ -1,0 +1,15 @@
+README.md
+LICENSE
+CHANGELOG.md
+docs/PRD_v1.3.md
+docs/用户访谈纪要_20260612.md
+docs/竞品对比.md
+prototype/index.html
+prototype/assets/logo.svg
+prototype/assets/style.css
+prototype/screens/01_首页.png
+prototype/screens/02_选座.png
+prototype/screens/03_签到.png
+prototype/screens/04_我的预约.png
+prototype/screens/05_违约记录.png
+prototype/mock/seats_demo.json
