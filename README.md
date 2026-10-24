@@ -137,4 +137,4 @@ python3 scripts/check.py README.md --root .
 
 ---
 
-作者：赵永明 · AI 产品经理
+作者：赵永明
