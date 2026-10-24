@@ -52,16 +52,21 @@ def exists(path, files, dirs):
 # ---------- 拆文档 ----------
 
 def parse(doc):
-    """返回 [(行号, 文本, 是否在代码块里, 所在小节标题)]"""
-    out, in_code, section = [], False, ""
+    """返回 [(行号, 文本, 是否在代码块里, 所在小节)]。小节写成「标题｜加粗小标题」，没有小标题就只有标题。"""
+    out, in_code, heading, label = [], False, "", ""
     for i, line in enumerate(open(doc, encoding="utf-8"), 1):
         line = line.rstrip("\n")
         if line.lstrip().startswith("```"):
             in_code = not in_code
             continue
-        if not in_code and re.match(r"#{1,6}\s", line):
-            section = line.lstrip("#").strip()
-        out.append((i, line, in_code, section))
+        if not in_code:
+            if re.match(r"#{1,6}\s", line):
+                heading, label = line.lstrip("#").strip(), ""
+            else:
+                m = re.match(r"^\s*\*\*(.+?)\*\*[:：]?\s*$", line)
+                if m:
+                    label = m.group(1).strip()
+        out.append((i, line, in_code, heading + ("｜" + label if label else "")))
     return out
 
 
@@ -74,6 +79,18 @@ BARE_FILE = re.compile(r"(?<![\w/.\-])([\w一-鿿\-.]+\.(?:pdf|docx?|pptx?|xlsx?
 MD_LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)\)")
 INLINE = re.compile(r"`([^`]+)`")
 SKIP_SECTION = re.compile(r"roadmap|规划|计划|二期|后续|future|todo", re.I)
+CURRENT = re.compile(r"当前|现在|已完成|已上线|MVP|current|done|shipped", re.I)
+DONE_ITEM = re.compile(r"^\s*[-*]\s*\[x\]", re.I)
+
+
+def in_plan(section, text=""):
+    """这一行是不是在说计划。打了 [x] 的条目、写着「当前」的小标题下面，都是在说已经做到的事。"""
+    if DONE_ITEM.match(text):
+        return False
+    if not SKIP_SECTION.search(section):
+        return False
+    label = section.split("｜", 1)[1] if "｜" in section else ""
+    return not (label and CURRENT.search(label))
 
 
 def find_paths(lines, files, dirs):
@@ -105,7 +122,7 @@ def find_paths(lines, files, dirs):
             continue
         plain = INLINE.sub(" ", MD_LINK.sub(" ", text))
         for name in BARE_FILE.findall(plain):
-            if not re.match(r"^https?:", name) and not SKIP_SECTION.search(section):
+            if not re.match(r"^https?:", name) and not in_plan(section, text):
                 add(n, name, "正文里的文件名")
         for link in MD_LINK.findall(text):
             if re.match(r"^(https?:|mailto:|#|\.$)", link):
@@ -117,7 +134,7 @@ def find_paths(lines, files, dirs):
                 continue  # 带空格的英文多半是命令或代码片段，不是路径
             if c.startswith(("http", "--")) or "=" in c or "(" in c:
                 continue
-            if PATHLIKE.match(c) and not SKIP_SECTION.search(section):
+            if PATHLIKE.match(c) and not in_plan(section, text):
                 add(n, c, "行内代码")
     # 许可证：文中声称了，仓库里却没有 LICENSE 文件
     claims = [n for n, t, c, s in lines
@@ -147,7 +164,7 @@ def find_signals(lines):
             words = sorted(set(m.group(0) for m in re.finditer(pat, text, re.I)))
             if words:
                 out.append({"line": n, "category": cat, "words": words,
-                            "section": section, "in_plan_section": bool(SKIP_SECTION.search(section)),
+                            "section": section, "in_plan_section": in_plan(section, text),
                             "text": text.strip()[:120]})
     return out
 
@@ -160,7 +177,7 @@ COUNT = re.compile(r"(\d+(?:\.\d+)?)\s*(个|页|屏|条|张|项|种|类|位|家|
 def find_numbers(lines):
     groups = {}
     for n, text, in_code, section in lines:
-        if in_code:
+        if in_code or in_plan(section, text):
             continue
         for num, unit, noun in COUNT.findall(text):
             groups.setdefault(unit + noun, []).append({"line": n, "value": num})

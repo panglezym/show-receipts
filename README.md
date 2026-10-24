@@ -1,8 +1,12 @@
 # show-receipts · 拿出证据
 
+**中文** · [English](README.en.md)
+
 > 文档发出去之前，让 AI 拿你手里的材料，把文档里的每一条说法对一遍账。
 
 *A Claude Code skill that audits a README, proposal or report against your own materials before you publish it. Every finding comes with evidence; anything it can't check offline is marked unverified, never "wrong".*
+
+![改前的 README 与 show-receipts 报告对照](assets/compare.png)
 
 ---
 
@@ -113,7 +117,7 @@ python3 scripts/check.py README.md --root .
 - 计分人只有一个，也是 skill 的作者这一方。逐条判定都公开了，可以复核。
 - 评测里，子代理是照着 SKILL.md 手动执行流程的，没有测过 Claude Code 自动触发这个 skill 的效果。
 
-完整记录、标准答案和 18 份原始报告都在 [eval/](eval/)。
+完整记录、标准答案和 18 份原始报告都在 [eval/](eval/)。两轮评测都是在 0.1.0 上做的，之后的改动见 [CHANGELOG.md](CHANGELOG.md)。
 
 ## 仓库里有什么
 
@@ -127,8 +131,11 @@ python3 scripts/check.py README.md --root .
 │   └── check.py          # 机械检查，只用标准库
 ├── examples/             # 3 个真实案例的改前、改后版本和文件清单
 ├── eval/                 # 两轮评测的设计、答案、原始报告、结果
+├── assets/compare.png    # 本页开头的对照图
+├── CHANGELOG.md
 ├── LICENSE
-└── README.md
+├── README.md
+└── README.en.md
 ```
 
 ## License
