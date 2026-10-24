@@ -1,4 +1,4 @@
-D-20261024-08 第 1 轮评审报告（show-receipts 流程，装 skill 臂）
+（评测单） 第 1 轮评审报告（show-receipts 流程，装 skill 臂）
 
 几点执行情况先说明：
 - 简报要求写 /tmp/sr_eval/chronic-patient_B/report.md。按你的补充说明，我没有写这个文件，任何文件都没写，完整报告就是这条回复。

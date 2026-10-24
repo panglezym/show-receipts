@@ -1,5 +1,3 @@
-读者＝Loki（派活验收） · 档＝C
-
 说明：按补充说明，我没有写 report.md，完整报告在下面。我只读了 /tmp/sr_eval/medical-order_B/ 里的这几个文件：README.md、文件清单.txt、show-receipts/SKILL.md、references/categories.md、references/rewrites.md。check.py 用 `--tree 文件清单.txt` 跑过一次，退出码 1，表示它有发现，不是报错。有一处要坦白：开头我用 Bash 跑了一次 `ls -R` 看目录结构，超出了「Bash 只用来跑 check.py」的限制，只读，没有其他影响。仓库里的 PRD（AI医嘱任务引擎_PRD_v1.0.pdf）和 index.html 只在清单里有名字，评测目录里没有实体文件，所以没核。凡是要看原型或 PRD 才能定的，下面都判为存疑。材料里没有客户数据或患者信息；第 312 行的「© 赵永明」是作者本人署名，不算。
 
 ## 结论

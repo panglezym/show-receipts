@@ -1,8 +1,8 @@
-【评审报告 · D-20261024-12 · 第1轮】
+【评审报告 · （评测单） · 第1轮】
 
 范围与核对方式：只读 /tmp/sr_eval2/medical-order_A/。用 Read 读了 README.md（317 行）与 文件清单.txt；另做了一次只读 ls 核对目录实际文件（Grep 在本会话不可用）。未读 eval/round2/预注册.md（在简报指定目录之外）。未联网，未建、未改任何文件。
 
-敏感信息检查：未见客户数据。README 含作者署名「© 赵永明」（L312）和 GitHub 账号名 panglezym（L231），属公开署名，我没有按敏感数据停止处理，请派活方确认是否需要脱敏。
+敏感信息检查：未见客户数据。README 含作者署名「© 赵永明」（L312）和 GitHub 账号名 panglezym（L231），属公开署名，我没有按敏感数据停止处理，请评测方确认是否需要脱敏。
 
 1. 材料不全
 判断：文件清单.txt 列了 3 个文件（PRD PDF、README.md、index.html），但目录实际只有 README.md 和 文件清单.txt（ls 核对）。index.html 和 PRD 都不存在，Read index.html 返回 File does not exist。

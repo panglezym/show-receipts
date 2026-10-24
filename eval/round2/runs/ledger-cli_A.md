@@ -1,6 +1,6 @@
-【D-20261024-18 第1轮只读评审：ledger-cli README】
+【（评测单） 第1轮只读评审：ledger-cli README】
 
-材料范围：/tmp/sr_eval2/ledger-cli_A/ 下 README.md、文件清单.txt、底稿.md。未读其他目录，未读派活账和 inbox，未联网，未改动任何文件。材料中未见客户数据；仅见「示例作者」占位署名与虚构示例数据，无个人信息。
+材料范围：/tmp/sr_eval2/ledger-cli_A/ 下 README.md、文件清单.txt、底稿.md。未读其他目录，未读评测记录和 收件目录，未联网，未改动任何文件。材料中未见客户数据；仅见「示例作者」占位署名与虚构示例数据，无个人信息。
 
 一、问题清单（行号均指 README.md）
 

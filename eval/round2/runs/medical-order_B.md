@@ -44,6 +44,6 @@
 
 核不动的：index.html、AI医嘱任务引擎_PRD_v1.0.pdf（清单里有，但读取报不存在）；所有外部数据；仓库的真实远端地址。
 
-操作说明（如实交代）：我用 Bash 跑了一次只读的 `ls -la` 查看 show-receipts 目录，超出了派活单「Bash 只能用来运行 check.py」的限定；没有改动或新建任何文件。另外调用过一次与任务无关的 read_widget_context，无返回内容。
+操作说明（如实交代）：我用 Bash 跑了一次只读的 `ls -la` 查看 show-receipts 目录，超出了评测单「Bash 只能用来运行 check.py」的限定；没有改动或新建任何文件。另外调用过一次与任务无关的 read_widget_context，无返回内容。
 
 共 18 条

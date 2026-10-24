@@ -1,4 +1,4 @@
-【show-receipts 评审报告 · D-20261024-21 · 第 1 轮】
+【show-receipts 评审报告 · （评测单） · 第 1 轮】
 范围：/tmp/sr_eval2/trip-planner-agent_B/README.md。依据：文件清单.txt、底稿.md、show-receipts/SKILL.md 及 references、check.py。未联网，未写任何文件。未见客户数据或个人信息。
 
 结论：可以发？否，改完再发。无据 10 条（含 1 条需先核的仓库完整性问题），存疑／建议改 4 条。
@@ -33,7 +33,7 @@
 
 13. 第 158 行「前后打磨了两个多月」。判断：无据（按底稿时间线算出的时长比文中小）。依据：底稿 L7 立项 2026-08-18，L10 notebook 跑通 2026-09-15，L3 底稿最后更新 2026-09-16；约 4 周。「提示词改了十几版」有据（底稿 L11「改了 13 版」）。严重度：必须改。建议：改为「约一个月内改了 13 版提示词」。注意：若 9 月 16 日之后仍有打磨，底稿没有记录，需作者先补时间线；否则按底稿改。
 
-14. 仓库完整性（先核，必须改）。判断：清单与本目录实际文件不一致，多处内容无法核。依据：文件清单.txt 列 12 个文件，但在本目录只读到 README.md。Read 报 File does not exist 的有 LICENSE、requirements.txt、.env.example、prompts/ 下 3 个文件、notebooks/demo_walkthrough.ipynb、data/ 下 3 个文件、outputs/demo_run_20260915.md。check.py --root 也报目录树第 134–148 行 15 项不存在，以及第 6、171 行 LICENSE 无文件。按派活单以清单为准，存在性检查通过；但内容无法核。若仓库确实缺这些文件，则第 100–106 行安装步骤、第 131–149 行目录树、第 6、171 行许可证都需改。
+14. 仓库完整性（先核，必须改）。判断：清单与本目录实际文件不一致，多处内容无法核。依据：文件清单.txt 列 12 个文件，但在本目录只读到 README.md。Read 报 File does not exist 的有 LICENSE、requirements.txt、.env.example、prompts/ 下 3 个文件、notebooks/demo_walkthrough.ipynb、data/ 下 3 个文件、outputs/demo_run_20260915.md。check.py --root 也报目录树第 134–148 行 15 项不存在，以及第 6、171 行 LICENSE 无文件。按评测单以清单为准，存在性检查通过；但内容无法核。若仓库确实缺这些文件，则第 100–106 行安装步骤、第 131–149 行目录树、第 6、171 行许可证都需改。
    核不动（未猜）：第 77–81 行 186/143/20 条（底稿 L8、L9 有据，CSV 未读到）；第 47 行「逐项核对门票、餐饮、交通」（budget_checker.md 未读到）；第 59、69 行「串行调用、JSON 传递」（底稿 L20 有据，代码未读到）；第 91 行运行记录内容（底稿 L10 有据，文件未读到）；第 113–117 行 notebook 行为（底稿 L16 有据，未读到）；第 44 行示例请求（sample_requests.jsonl 未读到）；第 3–6、171 行 Apache-2.0（底稿 L45 有据，LICENSE 未读到）。
 
 范围外：本目录还有 底稿.md（标题写「自用」）、文件清单.txt、show-receipts/ 评审脚手架。若整个目录外发，这些都会带出去，只发仓库文件即可。

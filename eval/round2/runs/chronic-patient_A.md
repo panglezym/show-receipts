@@ -1,6 +1,6 @@
-【评审报告 D-20261024-14 第1轮】
+【评审报告 （评测单） 第1轮】
 
-范围：只读了 README.md 和 文件清单.txt（ls 核过，磁盘上只有这两个文件）。未读 eval/round2/预注册.md、派活账和 inbox。未联网，未写任何文件。材料中未见客户数据。README L189 有一个公开 GitHub 链接，未作处理。
+范围：只读了 README.md 和 文件清单.txt（ls 核过，磁盘上只有这两个文件）。未读 eval/round2/预注册.md、评测记录和 收件目录。未联网，未写任何文件。材料中未见客户数据。README L189 有一个公开 GitHub 链接，未作处理。
 
 1. 判断：README 指向的主文件名在仓库里不存在。
 依据：README L14「chronic-care-patient.html   # 全部 16 屏，单文件原型」；L177「chronic-care-patient.html   # 完整原型（单文件，116 KB）」。文件清单.txt L2 为 index.html。磁盘上两者都没有。

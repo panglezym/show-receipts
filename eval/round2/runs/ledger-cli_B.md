@@ -1,6 +1,6 @@
 show-receipts 评审报告（README.md，只读，未改动或新建任何文件）
 
-范围：/tmp/sr_eval2/ledger-cli_B/README.md（190 行），对照 文件清单.txt（15 个路径）和 底稿.md（最后更新 2026-09-15）。已读 SKILL.md、references/categories.md、references/rewrites.md。check.py 以 python3 -I 运行一次（--tree 文件清单.txt），退出码 1，报出无据 1 条（L128）、待核信号词 7 处，其中 L174–176 和 L116 经底稿核对为误报。未读预注册、派活账和 inbox。材料中没有客户数据，只有「示例作者」占位。cli.py、importers.py 内容未提供，凡依赖它们的判断都标明了。
+范围：/tmp/sr_eval2/ledger-cli_B/README.md（190 行），对照 文件清单.txt（15 个路径）和 底稿.md（最后更新 2026-09-15）。已读 SKILL.md、references/categories.md、references/rewrites.md。check.py 以 python3 -I 运行一次（--tree 文件清单.txt），退出码 1，报出无据 1 条（L128）、待核信号词 7 处，其中 L174–176 和 L116 经底稿核对为误报。未读预注册、评测记录和 收件目录。材料中没有客户数据，只有「示例作者」占位。cli.py、importers.py 内容未提供，凡依赖它们的判断都标明了。
 
 结论：改完再发。无据 10 条，存疑 2 条，范围外 1 条。底稿是 9 月中旬的，之后若代码或发布状态有变，第 3、4、5、8 条请作者先核再改。
 

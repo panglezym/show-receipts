@@ -1,4 +1,4 @@
-D-20261024-04 第 1 轮 · show-receipts 流程评审 README.md（/tmp/sr_eval/data-query_B/）
+（评测单） 第 1 轮 · show-receipts 流程评审 README.md（/tmp/sr_eval/data-query_B/）
 
 执行说明：
 - 按你的补充指令，report.md 没有写，完整报告就在下面。整个过程没有联网。

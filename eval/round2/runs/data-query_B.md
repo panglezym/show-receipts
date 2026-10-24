@@ -1,4 +1,4 @@
-【评审报告 D-20261024-11 · 第 1 轮】
+【评审报告 （评测单） · 第 1 轮】
 范围：/tmp/sr_eval2/data-query_B/README.md（行号以 Read 输出为准）。依据：文件清单.txt、show-receipts/SKILL.md 与 references/categories.md、rewrites.md、check.py 输出（--tree 运行，退出码 1，表示有发现，属正常）。
 
 结论：不建议直接发布。必须改 10 条（无据 8、前后对不上 1、写错 1）；建议改 3 条；范围外 1 条。
