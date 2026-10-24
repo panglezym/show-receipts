@@ -133,7 +133,7 @@ python3 scripts/check.py README.md --root .
 
 ## License
 
-见 [LICENSE](LICENSE)。
+[MIT](LICENSE) · © 2026 赵永明
 
 ---
 
