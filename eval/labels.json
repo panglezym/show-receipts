@@ -1,0 +1,65 @@
+{
+  "说明": "人工标注的标准答案。core 是必须找出的问题，minor 是次要问题（找出加分、漏了不扣），neutral 是报了也不算误报的项。行号对应 examples/<案例>/before.md。在跑评测之前提交冻结，之后不按结果回改。",
+  "标注人": "Claude 起草，逐条对照原文；赵永明尚未复核",
+  "cases": {
+    "data-query": {
+      "core": [
+        {"id": "DQ1", "lines": [6, 7], "category": "演示数据冒充实测", "verdict": "无据", "note": "徽章写着问数成功率 87.4%、P95 8.6s，仓库只有静态原型，没有任何测量来源"},
+        {"id": "DQ2", "lines": [8, 8], "category": "演示数据冒充实测", "verdict": "无据", "note": "徽章写着「MVP 上线」，实际只是原型"},
+        {"id": "DQ3", "lines": [9, 9], "also": [308], "category": "写了不存在的东西", "verdict": "无据", "note": "声称 MIT 许可证，仓库里没有 LICENSE 文件"},
+        {"id": "DQ4", "lines": [173, 178], "category": "演示数据冒充实测", "verdict": "无据", "note": "「当前值」「✅ 达标」把示例数字写成了线上实测"},
+        {"id": "DQ5", "lines": [229, 241], "category": "写了不存在的东西", "verdict": "无据", "note": "npm install、cp .env.example、npm run dev/build，仓库里没有 package.json，也没有 .env.example"},
+        {"id": "DQ6", "lines": [225, 227], "category": "写了不存在的东西", "verdict": "无据", "note": "git clone 地址是占位的 your-org，而且和 markdown 链接搅在了一起，跑不通"},
+        {"id": "DQ7", "lines": [250, 273], "category": "写了不存在的东西", "verdict": "无据", "note": "项目结构列了 src/、docs/ 等十几个目录，仓库里只有 3 个文件"},
+        {"id": "DQ8", "lines": [279, 285], "category": "演示数据冒充实测", "verdict": "无据", "note": "「MVP（当前）」加 [x]，暗示这些都已经做出来上线了"}
+      ],
+      "minor": [
+        {"id": "DQ9", "lines": [296, 302], "category": "写了不存在的东西", "verdict": "无据", "note": "贡献指南默认有代码可以提 PR"},
+        {"id": "DQ11", "lines": [18, 18], "category": "往大里说", "verdict": "存疑", "note": "「全公司数字唯一可信」"},
+        {"id": "DQ13", "lines": [243, 246], "category": "写了不存在的东西", "verdict": "无据", "note": "环境要求暗示有可以运行的代码"}
+      ],
+      "neutral": [
+        {"lines": [1, 1], "note": "拼写错误 AI-Poered，不是诚实度问题"},
+        {"lines": [3, 4], "note": "「10 秒内」是产品主张"},
+        {"lines": [312, 312], "note": "设计原则句"}
+      ]
+    },
+    "medical-order": {
+      "core": [
+        {"id": "MO1", "lines": [6, 6], "category": "演示数据冒充实测", "verdict": "无据", "note": "徽章「用户规模 10 万」"},
+        {"id": "MO2", "lines": [15, 15], "category": "演示数据冒充实测", "verdict": "无据", "note": "正文「支撑 10 万用户规模」"},
+        {"id": "MO3", "lines": [9, 9], "also": [312], "category": "写了不存在的东西", "verdict": "无据", "note": "声称 MIT 许可证，没有 LICENSE 文件"},
+        {"id": "MO4", "lines": [193, 193], "category": "数字和引用没有出处", "verdict": "存疑", "note": "「行业均值约 70-80%」没有出处"},
+        {"id": "MO5", "lines": [233, 245], "category": "写了不存在的东西", "verdict": "无据", "note": "npm 和 .env 命令，没有 package.json"},
+        {"id": "MO6", "lines": [229, 231], "category": "写了不存在的东西", "verdict": "无据", "note": "占位的 your-org 克隆地址"},
+        {"id": "MO7", "lines": [255, 276], "category": "写了不存在的东西", "verdict": "无据", "note": "src/ 项目结构不存在"},
+        {"id": "MO8", "lines": [282, 289], "category": "演示数据冒充实测", "verdict": "无据", "note": "「当前版本（MVP）」加 [x]"}
+      ],
+      "minor": [
+        {"id": "MO9", "lines": [295, 295], "category": "演示数据冒充实测", "verdict": "无据", "note": "「当前为 Web/PWA」"},
+        {"id": "MO10", "lines": [300, 306], "category": "写了不存在的东西", "verdict": "无据", "note": "贡献指南默认有代码"}
+      ],
+      "neutral": [
+        {"lines": [316, 316], "note": "「零容忍」是设计原则句"},
+        {"lines": [18, 20], "note": "核心价值描述的是设计"}
+      ]
+    },
+    "chronic-patient": {
+      "core": [
+        {"id": "CP1", "lines": [14, 14], "category": "写了不存在的东西", "verdict": "无据", "note": "chronic-care-patient.html 不存在，实际文件是 index.html"},
+        {"id": "CP3", "lines": [176, 181], "category": "写了不存在的东西", "verdict": "无据", "note": "目录树里的 chronic-care-patient.html、docs/、慢愈-PRD-v1.0.docx 都不存在"},
+        {"id": "CP4", "lines": [190, 190], "category": "写了不存在的东西", "verdict": "无据", "note": "配套资源里的 慢愈-PRD-v1.0.docx 不存在"},
+        {"id": "CP5", "lines": [234, 234], "category": "写了不存在的东西", "verdict": "无据", "note": "慢愈-PRD-v1.0.pdf 不存在，实际是 慢愈-PRD-v1.pdf"}
+      ],
+      "minor": [
+        {"id": "CP10", "lines": [235, 238], "category": "数字和引用没有出处", "verdict": "存疑", "note": "PRD 各章内容只看文件清单无法核对"}
+      ],
+      "neutral": [
+        {"lines": [17, 17], "note": "「在线预览」却写成下载后打开，属于用词不准"},
+        {"lines": [168, 169], "note": "目标平台和生产建议是设计说明"},
+        {"lines": [243, 243], "note": "口号"},
+        {"lines": [1, 999], "note": "没提到仓库里还有 慢愈-项目介绍.pdf，属于遗漏，不是不实"}
+      ]
+    }
+  }
+}
